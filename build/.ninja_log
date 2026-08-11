@@ -1,0 +1,7 @@
+# ninja log v7
+95	626	8081422310030847	CMakeFiles/liquidity_bot.dir/tools/liquidity_bot.cpp.obj	e82d9342fc2618fe
+72	639	8081422309802226	CMakeFiles/exchange.dir/src/exchange_main.cpp.obj	4048ac5c89c16b62
+89	647	8081422309988446	CMakeFiles/trader_terminal.dir/tools/trader_terminal.cpp.obj	25de1a6b9821ef5d
+648	815	8081422315565101	tools/trader_terminal.exe	4c7402b99927c3fd
+639	816	8081422315477375	src/exchange.exe	a33d1409f6c6cb2d
+632	819	8081422315389674	tools/liquidity_bot.exe	5502c03fd507d981
