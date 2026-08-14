@@ -13,6 +13,7 @@ namespace exchange::matching{
     struct Level;
 
     struct alignas(64) Order{
+        //if possible try out splitting iceberg order and simpler orders for faster performance, right now they are same
         core::OrderId id{0}; // unique identifier for the order
         core::Side side{core::Side::BUY}; // side of the order (buy/sell)
         core::Price price{0}; // price of the order
@@ -36,4 +37,5 @@ namespace exchange::matching{
     };
 
     static_assert(sizeof(Order)<=128, "Order should stay compact enough for cache friendly access");
+    static_assert(std::is_standard_layout_v<Order>, "Order should be standard layout for cache friendly access");
 }
