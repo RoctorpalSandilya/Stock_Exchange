@@ -54,7 +54,7 @@
             void initialize_free_list() noexcept{
                 free_list_head= nullptr;
                 for(std::size_t index=0; index<N; ++index){
-                    auto *node= reinterpret_cast<FreeNode*>(&slots_[index].storage.data()); // cast the storage of the slot to a FreeNode pointer
+                    auto *node= reinterpret_cast<FreeNode*>(slots_[index].storage.data()); // cast the storage of the slot to a FreeNode pointer
                     node->next= free_list_head; // set the next pointer of the node to the head of the free list
                     free_list_head= node; // set the head of the free list to the node
                 }
